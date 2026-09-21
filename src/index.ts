@@ -1,8 +1,8 @@
-// caveman-api — A zero-dependency Cloudflare Worker serving a JSON API with health, echo, and caveman knowledge resources.
+// kai-juliusbrussee-caveman-pm3o — A lightweight, secure JSON API for monitoring and mitigating server-side vulnerabilities.
 // Zero-dependency Cloudflare Worker JSON API. Deploys as-is to *.workers.dev.
 
-/** Seed data for GET /knowledge. Replace with real content when building. */
-const knowledge: unknown[] = [{"id":1,"fact":"Cavemen were skilled hunters and gatherers."},{"id":2,"fact":"The earliest known cave paintings are over 40,000 years old."}];
+/** Seed data for GET /alerts. Replace with real content when building. */
+const alerts: unknown[] = [{"id":1,"description":"Potential unauthorized access detected."},{"id":2,"description":"Server-side request forgery attempt blocked."}];
 
 const json = (data: unknown, status = 200): Response =>
   new Response(JSON.stringify(data, null, 2), {
@@ -15,11 +15,11 @@ export default {
     const { pathname } = new URL(request.url);
 
     if (pathname === "/" || pathname === "/health") {
-      return json({ ok: true, service: "caveman-api", now: Date.now() });
+      return json({ ok: true, service: "kai-juliusbrussee-caveman-pm3o", now: Date.now() });
     }
 
-    if (pathname === "/knowledge") {
-      return json({ knowledge });
+    if (pathname === "/alerts") {
+      return json({ alerts });
     }
 
     if (pathname === "/echo") {

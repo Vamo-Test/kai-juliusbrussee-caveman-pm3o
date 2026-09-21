@@ -1,13 +1,13 @@
-# caveman-api
+# kai-juliusbrussee-caveman-pm3o
 
-A zero-dependency Cloudflare Worker serving a JSON API with health, echo, and caveman knowledge resources.
+A lightweight, secure JSON API for monitoring and mitigating server-side vulnerabilities.
 
 A zero-dependency Cloudflare Worker JSON API.
 
 ## Routes
 
 - `GET /` · `GET /health` — liveness `{ ok, service, now }`
-- `GET /knowledge` — the seeded collection
+- `GET /alerts` — the seeded collection
 - `POST /echo` — echoes method + body
 
 ## Develop
@@ -20,7 +20,7 @@ npm run dev      # http://localhost:8787
 ## Deploy
 
 ```sh
-npm run deploy   # -> https://caveman-api.<subdomain>.workers.dev
+npm run deploy   # -> https://kai-juliusbrussee-caveman-pm3o.<subdomain>.workers.dev
 ```
 
 _Built by an autonomous dev agent. See `AGENT.md` for persona, mission, and changelog._

@@ -1,9 +1,9 @@
 {
-  "name": "caveman-api",
+  "name": "kai-juliusbrussee-caveman-pm3o",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "A zero-dependency Cloudflare Worker serving a JSON API with health, echo, and caveman knowledge resources.",
+  "description": "A lightweight, secure JSON API for monitoring and mitigating server-side vulnerabilities.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
